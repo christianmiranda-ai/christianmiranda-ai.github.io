@@ -9,7 +9,7 @@
 	<meta name="keywords" content="" />
 	<meta name="author" content="" />
 
-  <!-- Facebook and Twitter integration -->
+	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content=""/>
@@ -39,7 +39,6 @@
 	<link rel="stylesheet" href="css/magnific-popup.css">
 
 	<link rel="stylesheet" href="css/style.css">
-
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -89,42 +88,79 @@
 							<div class="col-md-8 col-md-offset-2">
 								<div class="desc">
 									<h2>Liquid Rocket Engine Sizing Code</h2> 
+									<p>Drawing from my involvement with Sun Devil Rocketry and SEDS Rocketry Division, I developed a Python-based codebase to streamline 
+										liquid rocket engine (LRE) sizing calculations for the APEX club. Recognizing how painful manual propulsion calculations can be, I created 
+										scripts to automate the calculations. This is not just combustion chemistry, but calculations for blade angles on impellers, too, for example.
+										 The fundamental goal of this project was to develop a toolset in which the APEX Club (the turbomachinery-centric club I've mentioned here elsewhere),
+										 could rely on for faster iterative development. </p>
 
-									<p> This project draws inspiration from my experiences and knowledge gained from my exposure to on-campus clubs like Sun Devil Rocketry,
-                                        Students for the Exploration and Development of Space (SEDS) Rocketry Division, and more. I've come to realize that basic propulsion calculations
-                                        can be a bit lengthy. As such, I wanted to develop a series of scripts that handle said calculations for me. The goal was to leverage this Codebase
-                                        on behalf of the APEX club!
-                                    </p>
+										<img class="img-responsive" src="images/placeholder.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
 
-									<h3>Project Highlights</h3>
-									<!--<p><b>sample skill like a language </b> what you did exactly with it </p>-->
-									
-									<h3>Step-by-Step Overview:</h3>
-									<p> </p>
+									<h3>Project Overview and My Role</h3>
+									<p>As the sole developer, I designed a modular Python codebase to compute critical LRE parameters. This includes but isn't limited to specific speed, 
+										flow coefficients, and head changes. I used a variety of sources to put together all the governing equations, notating key assumptions of course, along the way. All sources are 
+										compiled below, but to gloss over them briefly: a SpaceX engineer wrote a solid retrospective involving equations and calculations he used to develop his own turbopump. In addition, 
+										Rocket Propulsion Elements was a great source as well, considering it does a good job of explaining the assumptions involved in using each governing equation (usually). </p>
+									<br>
 
-									<ol>
-										<li>Design Requirements Defined: Set up initial design parameters like wall thickness, surface area, heat transfer rate, etc.</li>
-										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-										<li>Data Collection & Preprocessing: Setting up code for initial heat transfer calculations to inform later design. </li>
-										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-										<li>Exploratory Design Analysis: Setting up simulations in nTop for lattice/TPMS selection, among other things.</li>
-										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-										<li>Core Design Work: </li>
-										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-										<li>Simulation & Optimization: xxx</li>
-										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-										<li>Real World Testing: xxx</li>
-										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-										<li>Final Integration: xxx</li>
-										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-									</ol>
-	
-									<h4>Summary: </h4>
-									<p> line 1</p>
-									<p> line 2</p>
-									<p> line 3</p>
-									<p> line 4</p>
-																		
+									<img class="img-responsive" src="images/placeholder.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+									<h3>Codebase Components</h3>
+									<ul>
+										<li><strong>Impeller Geometry</strong>: I programmed an <code>Impeller</code> class to calculate specific speed (Omega_s), exit flow coefficient (φ_t), and head coefficient (ψ_h).
+											This ensured optimal impeller sizing for centrifugal pumps.</li>
+										<br>
+
+										<img class="img-responsive" src="images/placeholder.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+										<li><strong>Profile and Blade Curves</strong>: I implemented equations for eye radius (r_eye), exit radius (r_exit), inlet/outlet angles (β_inlet, β_outlet), and hydraulic efficiency (η_HY). </li>
+										<br>
+
+										<img class="img-responsive" src="images/placeholder.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+										<li><strong>Inducer and Volute</strong>: My scripts computed net positive suction head (NPSH_se), suction specific speed (S_s), and volute head changes. </li>
+										<br>
+
+										<img class="img-responsive" src="images/placeholder.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+										<li><strong>Thermodynamic Analysis</strong>: The <code>Thermo</code> class calculated entropy generation and enthalpy changes to support the combustion chemistry calculations. </li>
+										<br>
+
+										<img class="img-responsive" src="images/placeholder.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
+										
+									</ul>
+
+									<h3>Development Process</h3>
+									<ul>
+										<li> I initially started scripting randomly as I profusely consumed Rocket Propulsion Elements. In fact, there was no plan for this to be a project at all in of itself, but rather, 
+											a means to an end. As I progressed through Rocket Propulsion Elements, as well as the Turbopump Retrospective, I came to realize that there was something here. So eventually, I revamped
+											my initial efforts from the ground up. As shown below, I started thinking more deeply about how to actually structure these scripts in a way that made them modular, troubleshootable,
+											and downright beautiful. </li>
+
+										<li> Then came the development 
+
+										</li>
+								
+									<br>
+									<img class="img-responsive" src="images/placeholder.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
+										
+									</ul>
+
+
+
+									<p>I defined requirements based on turbopump design standards (e.g., pressure changes, flow rates), conducted exploratory analyses to validate equations, and optimized scripts for accuracy using NumPy. I tested the codebase with sample inputs (e.g., ω=20,000 RPM, Q=1 m³/s), refining outputs like ΔH and φ_t to align with industry ranges. The modular structure allows easy updates for future engine designs.</p>
+
+									<h3>Verification and Validation</h3>
+									<p>I validated calculations against reference values (e.g., φ_t = 0.2–0.3) and used Matplotlib to visualize results, ensuring numerical stability. Unit tests confirmed equation accuracy for various input scenarios, enhancing reliability for APEX’s propulsion projects.</p>
+
+									<h3>Summary</h3>
+									<ul>
+										<li>Developed a Python codebase automating LRE turbopump sizing.</li>
+										<li>Streamlined complex calculations, saving design time for APEX.</li>
+										<li>Mastered Python, NumPy, and propulsion engineering principles.</li>
+										<li>Created a scalable toolset for student-led rocket development.</li>
+									</ul>
+
 									<p class="read"><a href="https://github.com/christianmiranda-ai/Liquid-Rocket-Engine-Development" target="_blank">Live Preview</a></p>
 								</div>
 							</div>

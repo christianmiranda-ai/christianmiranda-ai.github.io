@@ -51,6 +51,7 @@
 	</head>
 	<body>
 	
+	
 	<div id="colorlib-page">
 		<header>
 			<div class="container">
@@ -89,41 +90,60 @@
 							<div class="col-md-8 col-md-offset-2">
 								<div class="desc">
 									<h2>Turbopump Design Work</h2> 
+									<p>As a founding member of the Aerospace Propulsion Exploration (APEX) club at ASU, I've helped lead the design of a turbopump-fed LOX/kerosene rocket engine. 
+										Inspired by the work that competing clubs like Sun Devil Rocketry and SEDS do, we were inspired to fill a gap where we saw other universities breaking into: turbomachinery.
+										While the club is in its infancy, I personally designed all initial pump components (subject to change, most likely). </p>
+									<img class="img-responsive" src="images/turbopump.png" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
+									<br>
+									<img class="img-responsive" src="images/turbopump-testCart.png" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
 
-									<p>This project is an ongoing design and fabrication effort as part of the Aerospace Propulsion Exploration (APEX) Club on-campus at ASU. 
-                                        I'm apart of the initial group of students that decided to form something around it. Our start has been a little rocky... But we 
-                                        continue onward! 
-                                    </p>
+									<h3>Project Overview and My Role</h3>
+									<p>As mentioned previously, I spearheaded the mechanical design of the turbopump, from the impeller, inducer, housing, to knife-edge seals, backplates, and more. This was all developed
+										using software like Fusion 360 for planned future collaborative design work. I also made use of CFturbo, a software package that can produce fluid-optimized geometries for impellers
+										and inducers, among other things. I also designed the fundamental test stand structure and even parts of the combustion chamber assembly, so as to serve as something students could
+										build and improve upon as we gained more members. </p>
+								<br>
+									<img class="img-responsive" src="images/turbopump-crossSection.png" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
 
-									<h3>Project Highlights</h3>
-									<!--<p><b>sample skill like a language </b> what you did exactly with it </p>-->
-									
-									<h3>Step-by-Step Overview:</h3>
-									<p> </p>
+									<h3>Turbopump Component Design</h3>
+									<ul>
+										<li><strong>Impeller and Inducer</strong>: While I initially investigated how to design these in Fusion 360, it proved to be painfully annoying. Eventually, I came to be more reliant
+										CFTurbo. Making use of its global parameter-driven (e.g. expected head, operating pressure, etc) functions made it a breeze to iterate on the designs of the impeller and inducer respectively.
+										While it was a little painful exporting back into Fusion 360, some work arounds were indeed found and life went on as usual. </li>
+										<br>
 
-									<ol>
-										<li>Design Requirements Defined: Set up initial design parameters like wall thickness, surface area, heat transfer rate, etc.</li>
+										<img class="img-responsive" src="images/turbopump-HONimpeller.png" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
+										
+										<li><strong>Housing and Backplates</strong>: I engineered a robust housing and backplates in Fusion 360 to withstand high pressures, integrating knife-edge seals for leak prevention and structural stability.</li>
 										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-										<li>Data Collection & Preprocessing: Setting up code for initial heat transfer calculations to inform later design. </li>
+										<li><strong>Rotating Group</strong>: Using Dyrobes, I analyzed rotor dynamics for bearings and snap rings, ensuring vibration-free operation at high RPMs (e.g., 20,000 RPM).</li>
 										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-										<li>Exploratory Design Analysis: Setting up simulations in nTop for lattice/TPMS selection, among other things.</li>
+										<li><strong>Fasteners and Seals</strong>: I incorporated bolts and redundant sealing mechanisms to enhance reliability under extreme cold and pressure.</li>
 										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-										<li>Core Design Work: </li>
-										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-										<li>Simulation & Optimization: xxx</li>
-										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-										<li>Real World Testing: xxx</li>
-										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-										<li>Final Integration: xxx</li>
-										<img class="img-responsive" src="images/placeholder.png" alt=""><br>
-									</ol>
-	
-									<h4>Summary: </h4>
-									<p> line 1</p>
-									<p> line 2</p>
-									<p> line 3</p>
-									<p> line 4</p>
-																		
+									</ul>
+
+									<h3>Design and Analysis Process</h3>
+									<p>I defined requirements (e.g., pressure rise, flow rate, material strength) based on LOX/kerosene engine needs. Using CFturbo, I optimized fluid paths, followed by Fusion 360 modeling for component integration.
+										 Dyrobes ensured rotor stability, while Ansys simulations (ongoing) validate structural loads.</p>
+
+									<h3>Manufacturing and Procurement</h3>
+									<p>I planned procurement for aerospace-grade materials (e.g., titanium alloys from ATI Metals, 8–12 week lead) and components like bearings from SKF. Manufacturing leverages ASU’s CNC milling and 3D printing 
+										capabilities, with a 12 to 20 week timeline for fabrication and QA, adhering to ITAR and FAA regulations.</p>
+
+									<h3>Verification and Testing</h3>
+									<p>I developed a verification plan, including tolerance analysis (CMM inspections), rotor dynamics testing (Dyrobes), and Ansys FEA for stress under cryogenic conditions. The test stand design supports high-pressure 
+										LOX/kerosene testing, targeting industry-relevant performance metrics.</p>
+
+									<img class="img-responsive" src="images/combustionChamber.png" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+									<h3>Summary</h3>
+									<ul>
+										<li>Designed a turbopump-fed LOX/kerosene engine, advancing ASU’s propulsion capabilities.</li>
+										<li>Mastered Fusion 360, CFturbo, Dyrobes, and Ansys for aerospace design.</li>
+										<li>Built a test stand for safe, repeatable engine testing.</li>
+										<li>Led APEX’s technical efforts, overcoming early team challenges.</li>
+									</ul>
+
 									<p class="read"><a href="https://github.com/APEXatASU" target="_blank">Live Preview</a></p>
 								</div>
 							</div>
