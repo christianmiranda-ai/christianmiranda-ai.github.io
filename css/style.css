@@ -1123,3 +1123,16 @@ input[type="text"] {
 
 .js .animate-box {
   opacity: 0; }
+
+  /* Fix for typewriter effect layout shift */
+#check {
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.typewrite {
+    min-height: 1.2em;
+    display: inline-block;
+}
