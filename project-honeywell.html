@@ -88,80 +88,107 @@
 							</a>
 							<div class="col-md-8 col-md-offset-2">
 								<div class="desc">
-									<h2>Interning @ Honeywell Aerospace's Engines Facility</h2>
+									<h1>Interning @ Honeywell Engines Facility</h1>
                                     <br>
 
                                     <img class="img-responsive" src="images/honeywell-group.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
                                     <p> Picture: All Honeywell Aerospace Summer 2025 Interns</p>
                                     <br>
 
-                                    <p>During the summer of 2025, I spent 12 weeks working at one of six Honeywell Aerospace sites here in the Valley. I worked specifically
-                                        at the Phoenix Engines facility where all commercial airplane (and even tank, like the M1 Abrams) engines are designed and assembled. 
-                                        More specifically, I was apart of the Additive Manufacturing (AM) Design team, where we supported all design efforts related to printing parts in metal.
+                                    <p>During the summer of 2025, I worked at Honeywells Phoenix Engines facility as part of the Additive Manufacturing (AM) Design team.
+									Our group supported the design and production of metal 3D-printed aerospace parts.
                                     </p>
-
-                                    <img class="img-responsive" src="images/honeywell-aero.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
-                                    <p> Picture: HTF7000 Assembly Area, Honeywell Aerospace</p>
-                                    <br>
 
                                     <img class="img-responsive" src="images/honeywell-amtc2.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
                                     <p> Picture: Additive Manufacturing Technology Center, Honeywell Aerospace Phoenix Engines Facility</p>
                                     <br>
 
-									<h3> AM Design Workflow </h3>
-                                    <p> While my team was relatively small at Honeywell and some may find that to be a bad thing, I actually liked it. I got an end-to-end exposure
-                                        to the very tools that my colleagues use in their day-to-day.
+									<h2> AM Design Workflow </h2>
+                                    <p> Though small in size, our team gave me broad exposure to the entire AM pipeline, from CAD design to validation. The workflow typically followed these stages:
                                     </p>
 
                                     <img class="img-responsive" src="images/honeywell-workflow.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
                                     <p> Picture: AM Design Software Workflow | Siemens NX (1st), nTop (2nd), Simufact Additive (3rd), Materialise Magics (4th), GOM Inspect (5th)</p>
                                     <br>
 
-                                    <p> It's important to note that the software workflow is broadly linear, but this isn't always the case. Sometimes (as you'll see below), nTop, 
-                                        which can generate complex TPMS structures may not actually be needed for a given part. As such we may skip or return to certain applications as needed.
-                                        Ultimately, however, this is the general process in bringing a part from idea in NX to reality in GOM Inspect (the step where we scan the metal 3D print)!
+                                    <p> 
+									We'd typically start with Siemens NX, using it to generate CAD geometry and technical drawings. This also includes steps inside Teamcenter for proper part and 
+									drawing classification, per Honeywell's internal design guidelines. 
                                     </p>
 
                                     <img class="img-responsive" src="images/honeywell-nx.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
                                     <p> Picture: Siemens NX User Interface</p>
 									<br>
 
+									<p> Depending on the part, we may also integrate nTop to fully unleash the design capabilities of additive manufacturing. This includes application of TPMS or lattice structures,
+										 topology optimization, or simply remeshing.
+                                    </p>
+
                                     <img class="img-responsive" src="images/honeywell-ntop.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
                                     <p> Picture: nTop User Interface</p>
 									<br>
+
+									<p> Then we move into Simufact Additive, where we can simulate residual stress and distortion during printing and post processing (e.g. heat treatments),
+										 then precompensate the geometry to account for it and end up with a nominally toleranced part.
+                                    </p>
 
                                     <img class="img-responsive" src="images/honeywell-simufact.png" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
                                     <p> Picture: Simufact Additive User Interface</p>
 									<br>
 
+									<p> Next comes Materialise Magics. It has powerful diagnostics tools that can highlight mesh defects (e.g. shells or overlapping triangles) that can cause print failure. We can also
+										generate support structures like block or e-Stage (similar to resin supports) automatically.
+                                    </p>
+
                                     <img class="img-responsive" src="images/honeywell-magics.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
                                     <p> Picture: Materialise Magics User Interface</p>
 									<br>
+
+									<p> Now we move forward into Streamics. This is more of a manufacturing tool than it is a design tool. But it's still important in that it's where we submit print requests that the 
+										manufacturing engineers manage directly.
+                                    </p>
 
                                     <img class="img-responsive" src="images/honeywell-streamics.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
                                     <p> Picture: Streamics User Interface</p>
 									<br>
 
+									<p> Finally, once the part has been printed, we make use of GOM Inspect. In conjunction with handheld 3D scanners, we can compare the nominal CAD geometry to 3D scans here for deviation analysis.
+										This helps validate adherence to tolerances set in the drawings, informs the Simufact precompensation models, and more.
+                                    </p>
+
                                     <img class="img-responsive" src="images/honeywell-gomInspect.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
                                     <p> Picture: GOM Inspect (now ZEISS Inspect) User Interface</p>
 									<br>
 
-									<h3>Vehicle Design Summary:</h3>
+									<h3> Lessons Learned: </h3>
+
+									<p> Coming into this internship, I was a bit overconfident considering my experience with FDM and resin printing. Listed below are a handful of many lessons I learned during my internship
+										that shaped my understanding of metal additive manufacturing moving forward:
+									</p>
+									<br>
+
+									
 									<ul>
-                                        <li><strong>Anubis Rover (Carrier)</strong>: Designed by a fellow teammate, this is a 40kg, 2m x 1.25m x 1.25m titanium chassis to house smaller rovers, with six-wheel rocker-bogie suspension for 30° slopes and magnetometer mounts for stable data collection.</li>
+                                        <li><strong>Choose Datums with Intent</strong>: Improperly selected datums, especially on additive surfaces prone to poor surface texture or warpage (e.g. downskins) can create downstream, compounding issues.</li>
                                         <br>
 										<img class="img-responsive" src="images/honeywell-ducts.jpg" alt=""><br>
-										<li><strong>Prometheus Rover (Scout)</strong>: Designed by myself, this is a 25kg, 0.45m x 0.58m x 0.43m agile rover with dust-protected enclosures for RADOM dosimeter and six-wheel mobility for pit scouting.</li>
+
+										<li><strong>Design with Distortion in Mind</strong>: While CAD presents the perfectly nominal geometry, the real world often does not. Be generous with your tolerances, where possible, so as to maintain functionality.</li>
                                         <br>
 										<img class="img-responsive" src="images/honeywell-scanning.jpg" alt=""><br>
-										<li><strong>Tsukuyomi Rover (Climber)</strong>: Designed by myself, this is a 15kg, 0.25m x 0.38m x 0.19m design with LEMUR-inspired grippers for vertical climbing, housing LOLA LiDAR in a carbon-titanium frame.</li>
+										
+										<li><strong>Understand the role of AM</strong>: Additive manufacturing is powerful, no doubt, but it remains expensive and does not outright replace conventional processes. </li>
                                         <br>
-										<img class="img-responsive" src="images/honeywell-sampleprint.jpg" alt=""><br>
+										<img class="img-responsive" src="images/honeywell-scanning.jpg" alt=""><br>
+
+										<li><strong>Plan for Post-Processing</strong>: Metal prints require intermittent post-processing steps like depowdering, heat treatment, wire EDM, and more. Anticipate these to avoid complications (e.g. clogged passages) later on.</li>
                                         <br>
-                                        <li> The following is a Raytracing-rendered lunar environment I set up in Blender such that we could really emphasize the rovers capability amongst the stars. This was unnecessary in the grand scheme of things, frankly, but a fun sidequest nonetheless!
-                                        </li>
+										<img class="img-responsive" src="images/honeywell-scanning.jpg" alt=""><br>
+
+										<li><strong>Prioritize Mesh Quality</strong>: A clean, high-quality mesh underpins the entire workflow. It drives the pre-compensation model in Simufact, accurate diagnostics in Magics, and ultimately the fidelity of the printed part. </li>
                                         <br>
-                                        <img class="img-responsive" src="images/turbopump-HON3dpParts.jpg" alt=""><br>
+										<img class="img-responsive" src="images/honeywell-scanning.jpg" alt=""><br>
+
                                     </ul>
                                     <br>
 
@@ -181,7 +208,12 @@
 									<p>I validated designs through CMM inspections, FEA for structural loads, and thermal cycling tests, achieving TRL 7 for mechanical subsystems.</p>
                                     <br>
                                     
-									<h3>Summary</h3>
+									<h3>maybe unnecessary pix
+
+										<img class="img-responsive" src="images/honeywell-aero.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;"><br>
+                                    <p> Picture: HTF7000 Assembly Area, Honeywell Aerospace</p>
+                                    <br>
+									</h3>
 									<ul>
 										<li>Delivered mission-ready designs for a 2030 lunar launch under $300M budget.</li>
 										<li>Achieved TRL 7, enabling lunar pit exploration.</li>
