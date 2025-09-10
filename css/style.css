@@ -596,7 +596,7 @@ header {
       .work-entry-disabled .work-img .display-t .work-name {
         display: inline-block;
         padding: 4em 3em;
-        background: #000;
+        background: rgba(0, 0, 0, 0.7);
         -webkit-box-shadow: 0px 2px 49px -4px rgba(0, 0, 0, 0.21);
         -moz-box-shadow: 0px 2px 49px -4px rgba(0, 0, 0, 0.21);
         -ms-box-shadow: 0px 2px 49px -4px rgba(0, 0, 0, 0.21);
@@ -650,8 +650,8 @@ header {
         transition: 0.3s; }
       .work-entry .work-img .display-t .work-name {
         display: inline-block;
-        padding: 4em 3em;
-        background: #000;
+        padding: 15px 8px;
+        background: rgba(0, 0, 0, 0.7);
         -webkit-box-shadow: 0px 2px 49px -4px rgba(0, 0, 0, 0.21);
         -moz-box-shadow: 0px 2px 49px -4px rgba(0, 0, 0, 0.21);
         -ms-box-shadow: 0px 2px 49px -4px rgba(0, 0, 0, 0.21);
@@ -1135,4 +1135,87 @@ input[type="text"] {
 .typewrite {
     min-height: 1.2em;
     display: inline-block;
+}
+
+/* super cool changes below here!! transparent background work!!! */
+
+
+#colorlib-about {
+    position: relative;
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzhuZmRsbjM5cDNremV5Z2doc2U3bmV3aGNxNzRrcGh1bW9ncmE3aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1GuTsjBId1qmY/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates that SpaceX parallax effect */
+}
+
+/* Add dark overlay so your text is readable */
+#colorlib-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+/* Make sure your content sits above the overlay */
+#colorlib-about .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+#colorlib-services {
+    position: relative;
+    background-image: url('https://universemagazine.com/wp-content/uploads/2023/05/gigamoon-details3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Same parallax effect */
+}
+
+/* Dark overlay for readability */
+#colorlib-services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust darkness as needed */
+    z-index: 1;
+}
+
+/* Ensure content sits above overlay */
+#colorlib-services .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+#colorlib-work {
+    position: relative;
+    background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXIwYWRsZnkwamlrYTY4Yms5emx0ZjY4ZmRhNDU4cXlsb3NhbHIwOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4pTldWDec8WamJUc/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#colorlib-work::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+#colorlib-work .container {
+    position: relative;
+    z-index: 2;
 }
