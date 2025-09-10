@@ -1170,10 +1170,12 @@ input[type="text"] {
 
 #colorlib-services {
     position: relative;
-    background-image: url('https://universemagazine.com/wp-content/uploads/2023/05/gigamoon-details3.jpg');
+    background-image: url('https://media.cnn.com/api/v1/images/stellar/prod/181115180453-01-mars-best-moments-mars-globe-valles-marineris-enhanced.jpg?q=w_1576,c_fill');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Same parallax effect */
+    /* https://universemagazine.com/wp-content/uploads/2023/05/gigamoon-details3.jpg */
+
 }
 
 /* Dark overlay for readability */
@@ -1184,7 +1186,7 @@ input[type="text"] {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Adjust darkness as needed */
+    background: rgba(0, 0, 0, 0.2); /* Adjust darkness as needed */
     z-index: 1;
 }
 
@@ -1196,26 +1198,66 @@ input[type="text"] {
 
 
 
-#colorlib-work {
+#colorlib-work-experience {
     position: relative;
-    background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXIwYWRsZnkwamlrYTY4Yms5emx0ZjY4ZmRhNDU4cXlsb3NhbHIwOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4pTldWDec8WamJUc/giphy.gif');
+    background-image: url('https://bigthink.com/wp-content/uploads/2021/12/ezgif-3-d70a7e6cf57b.gif?lb=960,540');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
+    /* https://scitechdaily.com/images/Planet-Earth-Sunrise.gif */
 }
 
-#colorlib-work::before {
+#colorlib-work-experience::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+#colorlib-work-experience .container,
+#colorlib-portfolio .container {
+    position: relative;
+    z-index: 2;
+}
+
+#colorlib-work .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+#colorlib-portfolio {
+    position: relative;
+    background-image: url('https://wallpapers.com/images/high/4k-earth-crescent-perspective-w12cemy1qtq6xp9c.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    /* https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXIwYWRsZnkwamlrYTY4Yms5emx0ZjY4ZmRhNDU4cXlsb3NhbHIwOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4pTldWDec8WamJUc/giphy.gif */
+}
+
+#colorlib-portfolio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 #colorlib-work .container {
     position: relative;
     z-index: 2;
+}
+
+.work-entry .work-img {
+    background-color: transparent;
 }
