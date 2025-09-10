@@ -1,4 +1,3 @@
-<!-- begin doc-->
 <!DOCTYPE html>
 <html>
 
@@ -16,6 +15,9 @@
     <!-- font stuff -->
 	<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+	<!-- Font Awesome for hamburger icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<!-- css files -->
 	<link rel="stylesheet" href="css/animate.css"> <!-- css animations for later, especially fades -->
@@ -27,6 +29,98 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="js/modernizr-2.6.2.min.js"></script> <!-- -->
+	
+	<!-- Custom CSS for hamburger menu -->
+	<style>
+		/* Hamburger Menu Styles */
+		.topnav {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			background-color: rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(10px);
+			padding: 15px 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			box-shadow: 0 2px 1px rgba(255, 255, 255, 0.9);
+		}
+
+		.topnav .logo {
+			font-size: 24px;
+			font-weight: bold;
+			color: #ffffff;
+			text-decoration: none;
+		}
+
+		/* Hide the links inside the navigation menu by default */
+		.topnav #myLinks {
+			display: none;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			background-color: white;
+			min-width: 200px;
+			box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		/* Style navigation menu links */
+		.topnav #myLinks a {
+			color: #333;
+			padding: 15px 20px;
+			text-decoration: none;
+			font-size: 16px;
+			display: block;
+			transition: background-color 0.3s ease;
+		}
+
+		/* Style the hamburger menu */
+		.topnav a.icon {
+			background: transparent;
+			border: 2px solid #ffffff;
+			border-radius: 6px;
+			padding: 10px 12px;
+			color: #ffffff;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		.topnav a.icon:hover {
+			background-color: #333;
+			color: white;
+		}
+
+		/* Add a hover effect on menu links */
+		.topnav #myLinks a:hover {
+			background-color: #f8f9fa;
+			color: #333;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.topnav {
+				padding: 10px 15px;
+			}
+			
+			.topnav .logo {
+				font-size: 20px;
+			}
+			
+			body {
+				padding-top: 70px;
+			}
+		}
+
+		/* Smooth scroll for anchor links */
+		html {
+			scroll-behavior: smooth;
+		}
+	</style>
+	
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -36,17 +130,24 @@
 
     <body>  
     <div id="colorlib-page">
-		<header>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="colorlib-navbar-brand">
-							<a class="colorlib-logo" href="index.html">CM.</span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
+
+		<!-- Floating Navigation Menu -->
+<div class="topnav">
+    <a href="#colorlib-about" class="logo">CM.</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="#colorlib-about">About</a>
+        <a href="#colorlib-services">Skills</a>
+        <a href="#colorlib-work-experience">Work Experience</a>
+        <a href="#colorlib-portfolio">Portfolio</a>
+        <a href="./files/testnew2.pdf" target="_blank">Resume</a>
+    </div>
+	
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
 
 		<div id="colorlib-about">
 			<div class="container">
@@ -79,8 +180,8 @@
 								<div class="rotate">
 									<h2 class="heading">About</h2>
 								</div>
-								<link rel=“stylesheet” href=“https://icons.getbootstrap.com/icons/github/”> 
-								<link rel=“stylesheet” href=“https://icons.getbootstrap.com/icons/linkedin/”>
+								<link rel="stylesheet" href="https://icons.getbootstrap.com/icons/github/"> 
+								<link rel="stylesheet" href="https://icons.getbootstrap.com/icons/linkedin/">
 								<p>Welcome to my Portfolio!</p>
 								<p>This website is a spin-off project where I showcase my engineering adventures, from side projects that kept me up way too long to academic endeavors that challenged my brain in all the right ways. </p>
 								<p>Let's take a walk through the various things I've worked on!</p>
@@ -227,16 +328,20 @@
 			</div>
 		</div>
 
-		<div id="colorlib-work">
+		<div id="colorlib-work-experience">
 			<div class="container">
 
 				<div class="row text-center">
-				
+		
 				</div>
+
+				<br>
+				<br>
+				<br>
 
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
-						<span>Portfolio</span>
+						<span>Work Experience</span>
 						<h1>Work Experience</h1>
 					</div>
 				</div>
@@ -256,7 +361,7 @@
 								<span class="tag tag-outline">Siemens NX</span>
 								<span class="tag tag-outline">nTop</span>
 								<span class="tag tag-outline">Simufact Additive</span>
-								<span class="tag tag-outline">Materialise Magics</span>
+								<span ultrafast Additive</span>
 								<span class="tag tag-outline">GOM Inspect</span>
 								<span class="tag tag-outline">Teamcenter 16</span>
 
@@ -292,7 +397,7 @@
 							<div class="col-md-12">
 								<div class="desc">
 									<p>An overview of what I learned at my internship at Mercury Systems as a Manufacturing Engineering Intern.</p>
-									<p class="read"><a href="project-honeywell.html">View details</a></p>
+									<p class="read"><a href="project-mercury.html">View details</a></p>
 								</div>
 							</div>
 						</div>
@@ -317,16 +422,31 @@
 							<div class="col-md-12">
 								<div class="desc">
 									<p>An overview of what I learned as a full-time Mechanical Assembler at Mercury Systems.</p>
-									<p class="read"><a href="project-honeywell.html">View details</a></p>
+									<p class="read"><a href="project-mercuryFTE.html">View details</a></p>
 								</div>
 							</div>
 						</div>
 					</div>
 
+				</div>
+			</div>
+		</div>
+
+		<div id="colorlib-portfolio">
+			<div class="container">
+
+				<div class="row text-center">
+				
+				</div>
+
+				<br>
+				<br>
+				<br>
+
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
 						<span>Portfolio</span>
-						<h2>Projects</h2>
+						<h1>Projects</h1>
 					</div>
 				</div>
 
@@ -451,7 +571,7 @@
 							<div class="col-md-12">
 								<div class="desc">
 									<p>Inspired by the works I saw and did at Honeywell Aerospace, I was interested in developing my skills in nTop. </p>
-									<p class="read"><a href="project-heatexchanger.html">View details</a></p>
+									<p class="read"><a href="project-topologyoptimization.html">View details</a></p>
 								</div>
 							</div>
 						</div>
@@ -527,7 +647,7 @@
 							<div class="col-md-12">
 								<div class="desc">
 									<p> A project in collaboration with 15 other students across the country to simulate the rigors of a NASA-structured lunar mission. </p>
-									<p class="read"><a href="project-LSPACEmca.html">View details</a></p>
+									<p class="read"><a href="project-3dp.html">View details</a></p>
 								</div>
 							</div>
 						</div>
@@ -552,7 +672,7 @@
 							<div class="col-md-12">
 								<div class="desc">
 									<p>An open-ended final project for my statistics class where I went above-and-beyond in applying statistics to mechanical design and material strength testing.</p>
-									<p class="read"><a href="project-honeywell.html">View details</a></p>
+									<p class="read"><a href="project-mae301RnD.html">View details</a></p>
 								</div>
 							</div>
 						</div>
@@ -576,7 +696,7 @@
 							<div class="col-md-12">
 								<div class="desc">
 									<p> A project in collaboration with 8 other community college students across the country. </p>
-									<p class="read"><a href="project-narL2.html">View details</a></p>
+									<p class="read"><a href="project-ncas.html">View details</a></p>
 								</div>
 							</div>
 						</div>
@@ -684,8 +804,29 @@
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
 
+	<script>
+/* Toggle between showing and hiding the navigation menu links */
+function toggleMenu() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+/* Close menu when clicking outside */
+document.addEventListener('click', function(event) {
+    var menu = document.getElementById("myLinks");
+    var hamburger = document.querySelector(".topnav a.icon");
+    var logo = document.querySelector(".topnav .logo");
+    
+    if (!hamburger.contains(event.target) && !logo.contains(event.target) && !menu.contains(event.target)) {
+        menu.style.display = "none";
+    }
+});
+</script>
+
     </body>
-AS
-
+	
 </html>
-
